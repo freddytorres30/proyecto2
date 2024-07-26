@@ -1,12 +1,18 @@
-const correo=document.getElementById("inputMail")
-const contraseña=document.getElementById("inputPassword2")
-const btnConfirmar=document.getElementById("btnConfirmar")
+    const inputmail=document.getElementById("inputMail")
+    const inputpassword=document.getElementById("inputPassword")
 
-btnConfirmar.addEventListener("click",function () {
-    let mail = correo.value
-    localStorage.setItem("correo",mail)
-})
-btnConfirmar.addEventListener("click",function () {
-    let contra = contraseña.value
-    localStorage.setItem("contraseña",contra)
-})
+    const correo=localStorage.getItem("correo")
+    const contraseña=localStorage.getItem("contraseña")
+
+function validar(inputmail,inputpassword,correo,contraseña) {
+    
+    if (correo==inputmail && contraseña==inputpassword) {
+        window.location="adm.html"
+    }
+    else{
+        alert("Datos incorrectos")
+    }
+
+}
+
+
