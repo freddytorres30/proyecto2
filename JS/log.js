@@ -12,7 +12,12 @@ function validar(inputmail,inputpassword,correo,contraseña) {
     else{
         alert("Datos incorrectos")
     }
-
 }
+console.log(correo)
+console.log(contraseña)
+console.log(inputmail)
+console.log(inputpassword)
+
+
 
 

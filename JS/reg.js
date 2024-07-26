@@ -11,9 +11,6 @@ iniciar.addEventListener("click",function () {
     let contra = contraseña.value
     localStorage.setItem("contraseña",contra)
 })
-iniciar.addEventListener("click",function () {
-    let name = nombre.value
-    localStorage.setItem("nombre",name)
-})
+
 
 

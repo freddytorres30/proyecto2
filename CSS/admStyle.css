@@ -6,7 +6,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
+body{
+    background-color: black;
+}
 header{
     background-color: orangered;
     width: 100%;
@@ -30,6 +32,10 @@ header{
     justify-content: flex-end;
     align-items: center;
 }
+.btnClose a{
+    text-decoration: none;
+    color: #fff;
+}
 .btnClose button{
     width: 150px;
     font-size: 18px;
@@ -40,5 +46,104 @@ header{
     border: 0;
     outline: 0;
     cursor: pointer;
-    transition: background 1s;
+}
+.container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contEventos{
+    width: 600px;
+    background-color: rgba(41, 39, 39, 0.733);
+    padding: 20px 30px 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+.contTareas{
+    width: 600px;
+    background-color: rgba(41, 39, 39, 0.733);
+    padding: 20px 30px 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+.container h3{
+    margin: 20px;
+    color: #fff;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container select{
+    margin: 2px;
+    height: 35px;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+}
+.container input{
+    margin: 2px;
+    height: 30px;
+    background-color: #fff;
+    border: 0;
+    outline: none;
+    padding: 18px 15px;
+    color: black;
+    border-radius: 5px;
+}
+.crear{
+    margin: 5px;
+    width: 50px;
+    flex-basis: 48%;
+    font-size: 18px;
+    background-color: orangered;
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.linea{
+    background-color: orangered;
+    height: 2px;
+    max-width: 540px;
+    margin: 30px 30px 40px;
+}
+.titulo{
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.txt{
+    color: #929292;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btnEliminar{
+    margin: 5px;
+    width: 80px;
+    flex-basis: 48%;
+    font-size: 18px;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.btnEditar{
+    margin: 5px;
+    width: 70px;
+    flex-basis: 48%;
+    font-size: 18px;
+    background-color: rgb(26, 117, 221);
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
 }

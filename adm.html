@@ -12,11 +12,39 @@
             <h1>Bienvenido</h1>
         </div>
         <div class="btnClose">
-            <button class="cerrar">cerrar sesión</button>
+            <button id="cerrar" class="cerrar"><a href="log.html">cerrar sesión</a></button>
         </div>
     </header>
     <div class="container">
-
+        <div class="contTareas">
+            <div class="crearTarea">
+                <h3>Tareas</h3>
+                <input id="tarea" type="text" placeholder="Tarea">
+                <select class="priori" name="" id="prioridad">
+                    <option id="pri" value="baja">Baja</option>
+                    <option id="pri" value="media">Media</option>
+                    <option id="pri" value="alta">Alta</option>
+                </select>
+                <button class="crear" id="crearT" type="button">crear</button>
+            </div>
+            <div class="linea"></div>
+            <div id="tareas" class="tareas">
+                
+            </div>
+        </div>
+        <div class="contEventos">
+            <div class="crearEvento">
+                <h3>Eventos</h3>
+                <input id="evento" type="text" placeholder="Evento">
+                <input id="fecha" type="date" placeholder="Prioridad">
+                <button class="crear" id="crearE" type="button">crear</button>
+            </div>
+            <div class="linea"></div>
+            <div id="eventos" class="eventos">
+                
+            </div>
+        </div>
     </div>
+    <script src="JS/adm.js"></script>
 </body>
 </html>
