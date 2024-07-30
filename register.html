@@ -2,33 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarse</title>
-    <link rel="stylesheet" href="CSS/regStyle.css">
+    <link rel="stylesheet" href="CSS/regLogStyle.css">
+    <title>Registro</title>
 </head>
 <body>
-    <div class="container">
-        <div class="formContent">
-            <h1>Regístrate para iniciar sesión</h1>
-            <div class="inputGroup">
-                <div class="inputField" id="nameInput">
-                    <input id="nombre" type="text" placeholder="Nombre">
-                </div>
-                <div class="inputField">
-                    <input id="correo" type="email" placeholder="Correo">
-                </div>
-                <div class="inputField">
-                    <input id="contraseña" type="password" placeholder="Contraseña">
-                </div>
-                <p>¿Ya ingresaste tus datos?<a href="log.html">Click aquí</a> para iniciar sesión</p>
-            </div>
-            <div class="btnField">
-                <button id="signUp" type="button">Registrar</button>
-            </div>
-        </div>
-    </div>    
-
-
+    <section>
+        
+        <form id="signupForm">
+            <h2>Regístrate para iniciar sesión</h2>
+            <input type="text" placeholder="Nombre" id="name" required autofocus>
+            <input type="email" placeholder="Correo" id="email" required>
+            <input type="password" placeholder="Contraseña" id="password" required>
+            <input type="submit" value="Registro">
+            <p>¿Ya ingresaste tus datos?<a href="log.html">Click aquí</a> para iniciar sesión</p>
+        </form>
+        
+    </section>
     <script src="JS/reg.js"></script>
 </body>
 </html>

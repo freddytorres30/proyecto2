@@ -1,24 +1,15 @@
-
-//agregar tarea
 const tarea=document.getElementById("tarea")
 const priori=document.getElementById("priori")
 const crearT=document.getElementById("crearT")
 const tareas=document.getElementById("tareas")
 
-const localTareas=[]
 crearT.addEventListener("click",function () {
-    function validaB() {
-    }
-    if (tarea.value.length==0) {
-        alert("Ingrese una tarea")
-    }else{
-
     let tituloT=tarea.value
     let tareaN=document.createElement("h1")
     tareaN.innerHTML=tituloT
     tareaN.className="titulo"
     tareas.appendChild(tareaN)
-    
+
     const pri=document.getElementById("prioridad")
 
     let prioriT=pri.value
@@ -32,10 +23,6 @@ crearT.addEventListener("click",function () {
     editarT.textContent="Editar"
     editarT.className="btnEditar"
     tareas.appendChild(editarT)
-    editarT.addEventListener("click",function () {
-        newtex=prompt("editar")
-        tareaN.innerHTML=newtex
-    })
     //eliminar
     let eliminarT=document.createElement("button")
     eliminarT.textContent="Eliminar"
@@ -52,20 +39,15 @@ crearT.addEventListener("click",function () {
     let linea=document.createElement("div")
     linea.className="linea"
     tareas.appendChild(linea)
-    
-}})
+})
+
+
 //---------agregar eventos-------------
 const evento=document.getElementById("evento")
 const crearE=document.getElementById("crearE")
 const eventos=document.getElementById("eventos")
 const fecha=document.getElementById("fecha")
-
 crearE.addEventListener("click",function () {
-    function validaB() {
-    }
-    if (evento.value.length==0) {
-        alert("Ingrese un evento")
-    }else{
     let tituloE=evento.value
     let eventoN=document.createElement("h1")
     eventoN.innerHTML=tituloE
@@ -84,7 +66,7 @@ crearE.addEventListener("click",function () {
     editarE.className="btnEditar"
     eventos.appendChild(editarE)
     editarE.addEventListener("click",function () {
-        newtex=prompt("editar")
+        newtex=evento
         eventoN.innerHTML=newtex
     })
     //eliminar
@@ -104,6 +86,4 @@ crearE.addEventListener("click",function () {
     let linea=document.createElement("div")
     linea.className="linea"
     eventos.appendChild(linea)
-
-}})
-
+})

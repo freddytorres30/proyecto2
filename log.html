@@ -2,30 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="CSS/logStyle.css">
+    <link rel="stylesheet" href="CSS/regLogStyle.css">
+    <title>Login</title>
 </head>
 <body>
-    <div class="container">
-        <div class="formContent">
-            <h1>Iniciar sesión</h1>
-            <div class="inputGroup">
-                <div class="inputField">
-                    <input id="inputMail" type="email" placeholder="Correo">
-                </div>
-                <div class="inputField">
-                    <input id="inputPassword" type="password" placeholder="Contraseña">
-                </div>
-                <p>¿No tienes cuenta?<a href="register.html">Click aquí</a>para crear un usuario</p>
-            </div>
-            <div class="btnField">
-                <button id="signUp" type="button" onclick="validar()">Iniciar</button>
-            </div>
-        </div>
-    </div>    
-
-
-    <script src="JS/log.js"></script>
+    <section>
+        
+        <form id="loginForm">
+            <h2>Login</h2>
+            <input type="email" placeholder="correo" id="email" required autofocus>
+            <input type="password" placeholder="contraseña" id="password" required>
+            <input type="submit" value="Ingresar">
+            <p>¿No tienes cuenta?<a href="register.html">Click aquí</a>para crear un usuario</p>
+        </form>
+        
+    </section>
+    <script src="js/log.js"></script>
 </body>
 </html>

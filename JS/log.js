@@ -1,23 +1,16 @@
-    const inputmail=document.getElementById("inputMail")
-    const inputpassword=document.getElementById("inputPassword")
-
-    const correo=localStorage.getItem("correo")
-    const contraseña=localStorage.getItem("contraseña")
-
-function validar(inputmail,inputpassword,correo,contraseña) {
-    
-    if (correo==inputmail && contraseña==inputpassword) {
-        window.location="adm.html"
+const loginForm = document.querySelector('#loginForm')
+loginForm.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    const email = document.querySelector('#email').value
+    const password = document.querySelector('#password').value
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+    const validUser = Users.find(user => user.email === email && user.password === password)
+    if(!validUser){
+        return alert('Usuario o contraseña incorrectos!')
     }
-    else{
-        alert("Datos incorrectos")
-    }
-}
-console.log(correo)
-console.log(contraseña)
-console.log(inputmail)
-console.log(inputpassword)
+    alert(`Bienvenido ${validUser.name}`)
+    localStorage.setItem('login_success', JSON.stringify(validUser))
+    window.location="adm.html"   
 
-
-
+})
 

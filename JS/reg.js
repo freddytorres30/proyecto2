@@ -1,16 +1,24 @@
-const nombre=document.getElementById("nombre")
-const correo=document.getElementById("correo")
-const contraseña=document.getElementById("contraseña")
-const iniciar=document.getElementById("signUp")
+const signupForm = document.querySelector('#signupForm')
+signupForm.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    const name = document.querySelector('#name').value
+    const email = document.querySelector('#email').value
+    const password = document.querySelector('#password').value
 
-iniciar.addEventListener("click",function () {
-    let mail = correo.value
-    localStorage.setItem("correo",mail)
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+    const UserRegistered = Users.find(user => user.email === email)
+    if(UserRegistered){
+        return alert('El usuario ya esta registado!')
+    }
+
+    Users.push({name: name, email: email, password: password})
+    localStorage.setItem('users', JSON.stringify(Users))
+    alert('Registro Exitoso!')
+    //window.location.href = 'log.html'
+
 })
-iniciar.addEventListener("click",function () {
-    let contra = contraseña.value
-    localStorage.setItem("contraseña",contra)
-})
+
+
 
 
 
