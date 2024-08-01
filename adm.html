@@ -16,34 +16,33 @@
         </div>
     </header>
     <div class="container">
-        <form class="contTareas">
-            <div class="crearTarea">
-                <h3>Tareas</h3>
-                <input id="tarea" type="text" placeholder="Tarea">
-                <select class="priori" name="" id="prioridad">
-                    <option id="pri" value="baja">Baja</option>
-                    <option id="pri" value="media">Media</option>
-                    <option id="pri" value="alta">Alta</option>
-                </select>
-                <button class="crear" id="crearT" type="button">crear</button>
-            </div>
+        
+        <form id="contTareas" class="contTareas">
+            <h3>Tareas</h3>
+            <input id="tarea" type="text" placeholder="Tarea">
+            <select class="priori" name="" id="prioridad">
+                <option id="pri" value="baja">Baja</option>
+                <option id="pri" value="media">Media</option>
+                <option id="pri" value="alta">Alta</option>
+            </select>
+            <button class="crear" id="crearT" type="submit">crear</button>
             <div class="linea"></div>
             <div id="tareas" class="tareas">
                 
             </div>
         </form>
-        <div class="contEventos">
-            <div class="crearEvento">
-                <h3>Eventos</h3>
-                <input id="evento" type="text" placeholder="Evento">
-                <input id="fecha" type="date" placeholder="Prioridad">
-                <button class="crear" id="crearE" type="button">crear</button>
-            </div>
+        
+            
+        <form id="contEventos" class="contEventos">
+            <h3>Eventos</h3>
+            <input id="evento" type="text" placeholder="Evento">
+            <input id="fecha" type="date" placeholder="Prioridad">
+            <button class="crear" id="crearE" type="submit">crear</button>
             <div class="linea"></div>
             <div id="eventos" class="eventos">
                 
             </div>
-        </div>
+        </form>
     </div>
     <script src="JS/adm.js"></script>
 </body>

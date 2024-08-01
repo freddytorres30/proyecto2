@@ -6,11 +6,11 @@ loginForm.addEventListener('submit', (e)=>{
     const Users = JSON.parse(localStorage.getItem('users')) || []
     const validUser = Users.find(user => user.email === email && user.password === password)
     if(!validUser){
-        return alert('Usuario o contraseña incorrectos!')
+        return alert('Usuario o contraseña incorrectos')
     }
     alert(`Bienvenido ${validUser.name}`)
     localStorage.setItem('login_success', JSON.stringify(validUser))
-    window.location="adm.html"   
-
+    window.location="adm.html"  
+    loginForm.reset()
 })
 

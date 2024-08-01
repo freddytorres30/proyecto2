@@ -11,7 +11,7 @@ body{
 }
 header{
     background-color: orangered;
-    width: 100%;
+    width: auto;
     height: 60px;
     padding: 10px;
     display: flex;
@@ -76,6 +76,7 @@ header{
     font-family: Arial, Helvetica, sans-serif;
 }
 .container select{
+    width: 140px;
     margin: 2px;
     height: 35px;
     border: 0;
@@ -94,7 +95,7 @@ header{
 }
 .crear{
     margin: 5px;
-    width: 50px;
+    width: 100px;
     flex-basis: 48%;
     font-size: 18px;
     background-color: orangered;
@@ -112,6 +113,11 @@ header{
     margin: 30px 30px 40px;
 }
 .titulo{
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.descripcion{
     color: #fff;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -146,4 +152,43 @@ header{
     border: 0;
     outline: 0;
     cursor: pointer;
+}
+
+
+@media (max-width: 425px){
+    header{
+        background-color: orangered;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container{
+        height: auto;
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .contEventos{
+        width: auto;
+        background-color: rgba(41, 39, 39, 0.733);
+        padding: 20px 30px 40px;
+        text-align: center;
+        border-radius: 20px;
+        margin: 20px;
+    }
+    .contTareas{
+        width: auto;
+        background-color: rgba(41, 39, 39, 0.733);
+        padding: 20px 30px 40px;
+        text-align: center;
+        border-radius: 20px;
+        margin: 20px;
+    }
+
 }
