@@ -1,5 +1,5 @@
 
-//agregar tarea
+// agregar tarea
 const tareaInput = document.getElementById("tarea");
 const prioriInput = document.getElementById("prioridad");
 const crearT = document.getElementById("crearT");
@@ -11,7 +11,7 @@ function rTareas() {
 
     const tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || [];
     
-    tareasGuardadas.forEach(tarea => {
+    tareasGuardadas.forEach((tarea, index) => {
         const { descripcion, prioridad } = tarea;
 
         const tareaN = document.createElement("h1");
@@ -26,13 +26,13 @@ function rTareas() {
         editarT.textContent = "Editar";
         editarT.className = "btnEditar";
         editarT.type = "button";
-        editarT.addEventListener("click", () => editarTarea(tareaN, prioridadN));
+        editarT.addEventListener("click", () => editarTarea(tareaN, prioridadN, index));
 
         const eliminarT = document.createElement("button");
         eliminarT.textContent = "Eliminar";
         eliminarT.className = "btnEliminar";
         eliminarT.id = "btnEliminar";
-        eliminarT.addEventListener("click", () => eliminarTarea(tareaN, prioridadN, editarT, eliminarT));
+        eliminarT.addEventListener("click", () => eliminarTarea(tareaN, prioridadN, editarT, eliminarT, index));
 
         const linea = document.createElement("div");
         linea.className = "linea";
@@ -76,7 +76,7 @@ contTareas.addEventListener('submit', (e) => {
 });
 
 // Editar tarea
-function editarTarea(tareaN, prioridadN) {
+function editarTarea(tareaN, prioridadN, index) {
     const nuevaDescripcion = prompt("Editar descripción:", tareaN.innerHTML);
     const nuevaPrioridad = prompt("Cambiar prioridad:", prioridadN.textContent);
 
@@ -89,7 +89,7 @@ function editarTarea(tareaN, prioridadN) {
 }
 
 // Eliminar tarea
-function eliminarTarea(tareaN, prioridadN, editarT, eliminarT) {
+function eliminarTarea(tareaN, prioridadN, editarT, eliminarT, index) {
     if (confirm("¿Seguro que quieres eliminar esta tarea?")) {
         tareaN.remove();
         prioridadN.remove();
@@ -100,12 +100,16 @@ function eliminarTarea(tareaN, prioridadN, editarT, eliminarT) {
             linea.remove();
         }
 
+        const tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || [];
+        tareasGuardadas.splice(index, 1);  // Elimina la tarea del array
+        localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
+
         actualizarLocalStorage();
     }
 }
 
 function actualizarLocalStorage() {
-    const tareasGuardadas = Array.from(tareas.querySelectorAll('.descripcion')).map(tareaN => {
+    const tareasGuardadas = Array.from(tareas.querySelectorAll('.descripcion')).map((tareaN, index) => {
         const prioridadN = tareaN.nextElementSibling;
         return {
             descripcion: tareaN.innerHTML,
@@ -118,6 +122,7 @@ function actualizarLocalStorage() {
 
 // Cargar tareas
 document.addEventListener('DOMContentLoaded', rTareas);
+
 
 
 //---------agregar eventos-------------
