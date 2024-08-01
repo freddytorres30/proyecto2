@@ -59,7 +59,7 @@ contTareas.addEventListener('submit', (e) => {
 
     // local
     const tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || [];
-    
+    //validacion
     if (tareasGuardadas.some(tarea => tarea.descripcion === descripcion)) {
         alert('La tarea ya existe');
         return;
@@ -101,7 +101,7 @@ function eliminarTarea(tareaN, prioridadN, editarT, eliminarT, index) {
         }
 
         const tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || [];
-        tareasGuardadas.splice(index, 1);  // Elimina la tarea del array
+        tareasGuardadas.splice(index, 1);  // Elimina la tarea local
         localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
 
         actualizarLocalStorage();
